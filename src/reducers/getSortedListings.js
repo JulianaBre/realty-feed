@@ -2,7 +2,7 @@ import {
     PRICE_SORT,
     BED_SORT,
     SQ_FT_SORT
- } from '../actions/getListings';
+ } from "../actions/getListings";
 
 export const getSortedListings = (state = {}, action) => {
     const sortResponse = {};

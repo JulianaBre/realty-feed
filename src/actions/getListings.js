@@ -1,5 +1,3 @@
-import axios from 'axios';
-
 export const GET_BATMAN_SUCCESS = "GET_BATMAN_SUCCESS";
 export const GET_SUPERMAN_SUCCESS = "GET_SUPERMAN_SUCCESS";
 export const PRICE_SORT = "PRICE_SORT";

@@ -1,6 +1,6 @@
 import {
     GET_SUPERMAN_SUCCESS
- } from '../actions/getListings';
+ } from "../actions/getListings";
 
 export const getSupermanListings = (state = {}, action) => {
     const supermanResponse = {};

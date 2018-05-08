@@ -1,6 +1,6 @@
 import {
     GET_BATMAN_SUCCESS
- } from '../actions/getListings';
+ } from "../actions/getListings";
 
 export const getBatmanListings = (state = {}, action) => {
     const batmanResponse = {};

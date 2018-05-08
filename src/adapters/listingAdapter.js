@@ -7,14 +7,12 @@ export default class ListingAdapter {
       this.batmanData = get(response.getBatmanListings, "json");
       this.supermanData = get(response.getSupermanListings, "json");
       this.sortedData = get(response.getSortedListings, "list");
-      this.sortOrder = get(response.getSortedListings, "order");
   }
   
   adapt() {
     const batmanListings = [];
     const supermanListings = [];
     const sortedListings = this.sortedData;
-    const order = this.sortOrder;
     each(this.batmanData, (listing, key) => {
       let batman = {};
       batman.address = key;
@@ -43,8 +41,7 @@ export default class ListingAdapter {
     return {
       batmanListings,
       supermanListings,
-      sortedListings,
-      order
+      sortedListings
     };
   }
 }

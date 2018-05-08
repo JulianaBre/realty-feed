@@ -1,8 +1,8 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 import PropTypes from "prop-types";
-import axios from 'axios';
+import axios from "axios";
 import { connect } from "react-redux";
-import Listing from './Listing';
+import Listing from "./Listing";
 import each from "lodash/each";
 import isEmpty from "lodash/isEmpty";
 import {
@@ -12,8 +12,8 @@ import {
     PRICE_SORT,
     BED_SORT,
     SQ_FT_SORT
-} from '../actions/getListings'
-import ListingAdapter from '../adapters/listingAdapter'
+} from "../actions/getListings";
+import ListingAdapter from "../adapters/listingAdapter";
 
 class App extends Component {
     // Bind the callback functions here
@@ -185,6 +185,6 @@ export const mapDispatchToProps = dispatch => {
         }     
       }
     };
-  };
+};
 
 export default connect(mapStateToProps, mapDispatchToProps)(App);
