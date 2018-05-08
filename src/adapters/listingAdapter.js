@@ -6,15 +6,19 @@ export default class ListingAdapter {
     constructor(response) {
       this.batmanData = get(response.getBatmanListings, "json");
       this.supermanData = get(response.getSupermanListings, "json");
+      this.sortedData = get(response.getSortedListings, "list");
+      this.sortOrder = get(response.getSortedListings, "order");
   }
   
   adapt() {
     const batmanListings = [];
     const supermanListings = [];
+    const sortedListings = this.sortedData;
+    const order = this.sortOrder;
     each(this.batmanData, (listing, key) => {
       let batman = {};
       batman.address = key;
-      batman.price = get(listing, "cost");
+      batman.price = get(listing, "cost", "").replace(",", "");
       batman.beds = get(listing, "beds");
       batman.baths = get(listing, "baths");
       batman.size = get(listing, "sq_ft");
@@ -26,7 +30,7 @@ export default class ListingAdapter {
     each(get(this.supermanData, "items"), (listing) => {
       let superman = {};
       superman.address = get(listing, "address");
-      superman.price = get(listing, "price");
+      superman.price = get(listing, "price", "").replace(",", "");
       superman.beds = get(listing, "beds");
       superman.baths = get(listing, "baths");
       superman.size = get(listing, "sqft");
@@ -38,7 +42,9 @@ export default class ListingAdapter {
     })
     return {
       batmanListings,
-      supermanListings
+      supermanListings,
+      sortedListings,
+      order
     };
   }
 }

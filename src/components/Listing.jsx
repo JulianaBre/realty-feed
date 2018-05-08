@@ -2,6 +2,12 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 
 export default class Listing extends Component {
+    renderBuildData(built) {
+        if (built) {
+            return <div className="built">Built in {built}</div>;
+        }
+    }
+
     render() {
         const {
             address,
@@ -18,7 +24,7 @@ export default class Listing extends Component {
         <div className="house-img">
             <a href={url}><img src={img} width="100px" alt="house"></img></a>
         </div>
-        <div className="built">Built in {built}</div>
+        {this.renderBuildData(built)}
         <div className="house-data">
             <div className="address">{address}</div>
             <div className="price">${price}</div>

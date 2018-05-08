@@ -2,6 +2,10 @@ import axios from 'axios';
 
 export const GET_BATMAN_SUCCESS = "GET_BATMAN_SUCCESS";
 export const GET_SUPERMAN_SUCCESS = "GET_SUPERMAN_SUCCESS";
+export const PRICE_SORT = "PRICE_SORT";
+export const BED_SORT = "BED_SORT";
+export const SQ_FT_SORT = "SQ_FT_SORT";
+
 
 export const getBatmanSuccess = (response) => ({
     type: GET_BATMAN_SUCCESS,
@@ -13,20 +17,8 @@ export const getSupermanSuccess = (response) => ({
     response
 });
 
-// export const fetchListings = (hero) => {
-//     return dispatch => {
-//         if (hero === "batman") {
-//             return axios.get("/data/batmanRealty.json")
-//             .then(response => {
-//                 return response.json()
-//                 .then(responseJson => dispatch(getBatmanSuccess(responseJson)))
-//             })   
-//         } else if ("superman") {
-//             return axios.get("/data/supermanRealty.json")
-//             .then(response => {
-//                 return response.json()
-//                 .then(responseJson => dispatch(getSupermanSuccess(responseJson)))
-//             })                      
-//         }
-//     }
-// }
+export const sortBy = (type, batmanListing, supermanListing) => ({
+    type,
+    batmanListing,
+    supermanListing
+});

@@ -4,7 +4,6 @@ import {
 
 export const getBatmanListings = (state = {}, action) => {
     const batmanResponse = {};
-    const supermanResponse = {};
 
     switch (action.type) {
         case GET_BATMAN_SUCCESS:
