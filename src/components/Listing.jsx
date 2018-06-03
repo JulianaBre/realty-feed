@@ -22,7 +22,7 @@ export default class Listing extends Component {
         return (
         <div className="listing">
         <div className="house-img">
-            <a href={url}><img src={img} width="100px" alt="house"></img></a>
+            <a href={url}><img src={img} width="100%" alt="house"></img></a>
         </div>
         {this.renderBuildData(built)}
         <div className="house-data">

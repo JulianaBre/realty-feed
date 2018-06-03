@@ -18,10 +18,10 @@ iPad:
 
 ![Alt text](img_ipad.png?raw=true "ipad image")  
 
-iPhone 8 Plus:  
+iPhone Plus:  
 
 ![Alt text](img_iphone.png?raw=true "iphone plus image")  
 
-Galaxy S5:  
+Galaxy:  
 
-![Alt text](img_galaxy.png?raw=true "Galaxy s5 image")  
+![Alt text](img_galaxy.png?raw=true "Galaxy image")  
